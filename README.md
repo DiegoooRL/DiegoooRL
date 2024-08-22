@@ -43,9 +43,9 @@
 <h2 align="center">🐍 My Contributions</h2>
 <br/>
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=DiegoooRL&theme=vue" alt="Contribution Graph" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=DiegoooRL&theme=vue" alt="Most Commit Language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DiegoooRL&theme=vue" alt="Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=DiegoooRL&theme=react" alt="Contribution Graph" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=DiegoooRL&theme=react" alt="Most Commit Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DiegoooRL&theme=react" alt="Stats" />
 </div>
 
 <br/>
