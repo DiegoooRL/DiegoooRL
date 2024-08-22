@@ -1,0 +1,34 @@
+name: Generate Snake
+
+# Controls when the action will run. This runs every 6 hours.
+on:
+  schedule:
+      # every 6 hours
+    - cron: "0 */6 * * *"
+
+# This runs the action on workflow dispatch (manual trigger)
+  workflow_dispatch:
+
+# The sequence of jobs to be run.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository so the workflow can access it.
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Generates the snake animation and saves it as a SVG file
+      - name: Generate Snake
+        uses: Platane/snk@v2
+        with:
+          github_user_name: DiegoooRL
+          outputs: dist/snake.svg
+
+      # Upload the SVG to the output branch
+      - name: Upload Snake
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: output
+          file: dist/snake.svg
