@@ -1,1 +1,38 @@
 
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # Triggers the workflow every 12 hours
+  workflow_dispatch:  # Allows manual triggering of the workflow
+  push:
+    branches:
+      - main  # Triggers the workflow on a push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4  # Use the latest version of the checkout action
+
+      - name: Generate Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: DiegoooRL  # Replace with your GitHub username
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and Push
+        run: |
+          git add dist/github-contribution-grid-snake.svg
+          git commit -m "Generate snake contribution graph" || echo "No changes to commit"
+          git push origin main --force  # Force pushes to the main branch
