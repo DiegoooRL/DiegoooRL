@@ -14,7 +14,7 @@
  
  🌱 I’m currently learning **Java**
 
- </div>
+</div>
  
 <div align="center"> 
   <a href="mailto:513642@vistacollege.nl">
@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
   </a>
   <a href="https://github.com/DiegoooRL" target="_blank">
-     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> <!-- sqlite, safari, google-chrome are other good icon options -->
+     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> 
   </a>
 </div>
 
@@ -40,14 +40,15 @@
 <br/>
 <hr/>
 
+<h2 align="center">🐍 My Contributions</h2>
+<br/>
 <div align="center">
-  <h2>🐍 My Contributions 🐍</h2>
-  <br>
-<img alt="snake eating my contributions" src="https://raw.githubusercontent.com/DiegoooRL/DiegoooRL/main/dist/github-contribution-grid-snake.svg" />
-
-  <br/><br/><br/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=DiegoooRL&theme=vue" alt="Contribution Graph" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=DiegoooRL&theme=vue" alt="Most Commit Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DiegoooRL&theme=vue" alt="Stats" />
 </div>
 
+<br/>
 <hr/>
 
 <h2 align="center">⚡ Stats ⚡</h2>
