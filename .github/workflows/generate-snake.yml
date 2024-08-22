@@ -1,12 +1,13 @@
 name: Generate Snake
 
+# The `on` section defines the events that will trigger the workflow.
 on:
   schedule:
-    - cron: "0 */12 * * *"  # Runs every 12 hours
-  workflow_dispatch:  # Allows manual trigger
+    - cron: "0 */12 * * *"  # Triggers the workflow every 12 hours
+  workflow_dispatch:  # Allows manual triggering of the workflow
   push:
     branches:
-      - main  # Run the workflow on push to main branch
+      - main  # Triggers the workflow on a push to the main branch
 
 jobs:
   build:
@@ -14,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4  # Updated to the latest version
+        uses: actions/checkout@v4  # Use the latest version of the checkout action
 
       - name: Generate Snake
         uses: Platane/snk@v3
@@ -34,12 +35,4 @@ jobs:
         run: |
           git add dist/github-contribution-grid-snake.svg
           git commit -m "Generate snake contribution graph"
-          git push origin output  # Ensure the branch exists or is created
-
-    - name: Push to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4  # Updated to the latest version
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push origin main  # Pushes to the main branch
